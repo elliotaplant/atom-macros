@@ -8,7 +8,7 @@ EVAL = require 'eval'
 PathWatcher = require 'pathwatcher'
 _ = require 'underscore-plus'
 
-MACROS_FILE = 'macros.coffee'
+MACROS_FILE = 'macros.js'
 PREPEND_FILE = 'prepend.coffee'
 SAMPLE_FILE = 'sample-macros.coffee'
 
@@ -66,7 +66,7 @@ module.exports = Macros =
 
     atom.packages.activatePackage('toolbar')
       .then (pkg) =>
-        @toolbar =  pkg.mainModule
+        @toolbar = pkg.mainModule
 
         @addMacroCommands()
 
